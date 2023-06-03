@@ -21,11 +21,14 @@ body {
     }
     
     .element {
-      margin: auto;
+      margin: 0;
 text-align: center;
 font-size: 30px
     }
     
+    
+    
+
 
     
     .element1,
@@ -48,35 +51,74 @@ font-size: 30px
        h1 {
             text-align: center;
 font-size: 120px; 
-margin-top: 0
+line-height: 0
         }
 
 
 
 	        img {
-            width: 350px; /* Adjust the width as needed */
+            width: 500px; /* Adjust the width as needed */
             height: auto; /* Maintain the aspect ratio */
 		;
 
         }
 
   </style>
+
+  <script>
+    function updateTime() {
+      var currentDate = new Date();
+      var options = {  year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
+
+      var currentDateStr = currentDate.toLocaleTimeString('pl-PL', options);
+
+      document.getElementById('date').textContent = currentDateStr;
+
+	
+    }
+
+    // Update time every second
+    setInterval(updateTime, 1000);
+  </script>
+
+  <script>
+    function data1() {
+      var currentDate = new Date();
+      var options = {  year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
+
+      var currentDateStr = currentDate.toLocaleTimeString('pl-PL', options);
+
+      document.getElementById('date1').textContent = currentDateStr;
+
+	
+    }
+ 
+  </script>
+
+
 </head>
 
 <body>
 
 
-<div class="element">
-  <h1>Samopis.<br>
-	 </div>
+
+  <h1>Samopis<br>
 
 </h1>
+
+
+<div class="element444">
+  <p> 
+Data: <span id="date"></span>
+ 
+ </p>
+</div>
 
 
 
   <form onsubmit="return validateForm()" 
 	  method="post" 
-  action="https://script.google.com/macros/s/AKfycbyiaPGPaiccWtSxPbZ8fhcRMTb6_Q6jaKLPbJ_laSND1BKwmJeDkDCUXOgpNNIs48X6/exec" >
+  action="https://script.google.com/macros/s/AKfycbxpAkpdE6zIOK4otdH8690Q6_Z9uxkKvBkMMnfqEmgtjGGqxgezzGp7ziqv8Qi17huA/exec" >
 
 
   <div class="container">
@@ -93,7 +135,6 @@ margin-top: 0
 <div style="text-align: center;">
 <img src="robot.gif" alt="Robot Image" ><br>
 </div>
-	  
 <div style="text-align: center;">
 <div class="element3">
     <label for="input2">Numer Księgi Wieczystej:</label><br>
@@ -117,21 +158,21 @@ margin-top: 0
   
 
 
-
+<input type="hidden" id="time" name="time" value="=now()">
 
 
 <div class="element">
 
  
 <label for="Email">Adres e-mail:</label><br>
-  <input type="email" id="Email" name="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required style="width: 300px; height: 50px; font-size: 25px; text-align: center;"><br>
+  <input type="email" id="Email" name="Email" style="width: 300px; height: 50px; font-size: 25px; text-align: center;"><br>
 
 </div>
 </div>
 </div>
 
 <div class="element">
-   <input type="submit" value="Rozpocznij " style="margin-right: 10px; font-size: 25px; padding: 10px 20px; background-color: #f2f2f2; color: #333; border: 2px solid #ccc; border-radius: 0px; font-weight: bold;"">
+   <input type="submit" value="Rozpocznij" onclick="submitForm()"  style="margin-right: 10px; font-size: 25px; padding: 10px 20px; background-color: #f2f2f2; color: #333; border: 2px solid #ccc; border-radius: 0px; font-weight: bold;"">
 
 
 </div>
@@ -209,13 +250,16 @@ if (!input2 || !/^\d{8}$/.test(input2)) {
   return false;
 }
       
+     
   method="POST" 
-  action="https://script.google.com/macros/s/AKfycbyiaPGPaiccWtSxPbZ8fhcRMTb6_Q6jaKLPbJ_laSND1BKwmJeDkDCUXOgpNNIs48X6/exec";
+  action="https://script.google.com/macros/s/AKfycbxpAkpdE6zIOK4otdH8690Q6_Z9uxkKvBkMMnfqEmgtjGGqxgezzGp7ziqv8Qi17huA/exec";
     }
 
 
-
   </script>
+
+
+
   </form>
 </body>
 </html>
