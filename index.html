@@ -326,6 +326,7 @@ Data: <span id="date">13 czerwca 2023 19:35:38</span>
 
   <script>
     function validateForm() {
+	var input3 = document.getElementById("Email").value;
       var input1 = document.getElementById("input1").value;
 	var input2 = document.getElementById("input2").value.toUpperCase();
 	var input2 = document.getElementById("input2").value;
@@ -382,22 +383,26 @@ Data: <span id="date">13 czerwca 2023 19:35:38</span>
       
       if (!validOptions.includes(input1)) {
   if (!input1) {
-    alert("Wpisz Znak Wydziału Sądu");
+    alert("Wpisz Znak Wydziału Sądu.");
   } else {
-        alert("Zły Znak Wydziału Sądu");
+        alert("Zły Znak Wydziału Sądu.");
     }
         return false;
       }
       
 if (!input2 || !/^\d{8}$/.test(input2)) {
   if (!input2) {
-    alert("Wpisz Numer Księgi Wieczystej");
+    alert("Wpisz Numer Księgi Wieczystej.");
   } else {
-    alert("Zły Numer Księgi Wieczystej");
+    alert("Zły Numer Księgi Wieczystej.");
   }
   return false;
 }
-      
+
+if (!input3) {
+  alert("Wpisz adres e-mail.");
+  return false;
+}
      
   method="POST" 
   action="https://script.google.com/macros/s/AKfycbwt9pXf0Snt9fPud7PHvaj6Z0kWIk5-65SOv3st-Xrfqztcxtafub_1Zc5bUOfO9Y-o/exec";
