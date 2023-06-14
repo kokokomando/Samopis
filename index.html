@@ -114,6 +114,25 @@ font-size: 60px;
  
   </script>
 
+<title>Kontrolna Output</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#input1, #input2').on('input', function() {
+                var input1 = $('#input1').val();
+                var input2 = $('#input2').val();
+                var kwtest = input1 + '/' + input2;
+                $.ajax({
+                    type: 'POST',
+                    url: '/',
+                    data: {kwtest: kwtest},
+                    success: function(response) {
+                        $('#output').text(response.kontrolna);
+                    }
+                });
+            });
+        });
+    </script>
 
 </head>
 
@@ -172,6 +191,9 @@ Data: <span id="date">13 czerwca 2023 19:35:38</span>
 <div class="element">
 <label for="input3">[Cyfra kontrola zostanie uzupełniona automatycznie.]
 
+
+<p id="output"></p>
+	
 </label>
 
 <br>
