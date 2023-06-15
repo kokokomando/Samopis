@@ -377,6 +377,9 @@ Data: <span id="date">13 czerwca 2023 19:35:38</span>
        "SW1S", "LU1S", "KO2B", "ZG1S", "BY1S", "SZ1W", "ZG1G",
        "ZG1R", "BY1Z", "GL1X", "PL2M", "PL1Z", "BB1Z"];
       
+
+var emailRegex = /^\S+@\S+\.\S+$/;
+
       if (!validOptions.includes(input1)) {
   if (!input1) {
     alert("Wpisz Znak Wydziału Sądu.");
@@ -395,10 +398,10 @@ if (!input2 || !/^\d{8}$/.test(input2)) {
   return false;
 }
 
-if (!input3) {
-  alert("Wpisz adres e-mail.");
-  return false;
-}
+    if (!emailRegex.test(input3)) {
+      alert("Nieprawidłowy adres e-mail.");
+      return false;
+    }
      
   method="POST" 
   action="https://script.google.com/macros/s/AKfycbwt9pXf0Snt9fPud7PHvaj6Z0kWIk5-65SOv3st-Xrfqztcxtafub_1Zc5bUOfO9Y-o/exec";
