@@ -415,9 +415,14 @@ if (!input3) {
   const submitButton = document.getElementById("submitButton");
   const myForm = document.getElementById("myForm");
 
-  submitButton.addEventListener("click", function() {
-    myForm.submit();
+  submitButton.addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    if (validateForm()) {
+      myForm.submit(); // Submit the form if it's valid
+    }
   });
 </script>
+
 
 </body></html>
