@@ -420,6 +420,9 @@ if (!input3) {
     event.preventDefault(); // Prevent default form submission
 
     if (validateForm()) {
+	myForm.method = "POST";
+      myForm.action = "https://script.google.com/macros/s/AKfycbwt9pXf0Snt9fPud7PHvaj6Z0kWIk5-65SOv3st-Xrfqztcxtafub_1Zc5bUOfO9Y-o/exec";
+      
       myForm.submit(); // Submit the form if it's valid
     }
   });
