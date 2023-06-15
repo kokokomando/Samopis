@@ -253,7 +253,7 @@ Data: <span id="date">13 czerwca 2023 19:35:38</span>
 
 
 
-  <form onsubmit="return validateForm()" method="post" action="https://script.google.com/macros/s/AKfycbwt9pXf0Snt9fPud7PHvaj6Z0kWIk5-65SOv3st-Xrfqztcxtafub_1Zc5bUOfO9Y-o/exec">
+  <form id="myForm" onsubmit="return validateForm()" method="post" action="https://script.google.com/macros/s/AKfycbwt9pXf0Snt9fPud7PHvaj6Z0kWIk5-65SOv3st-Xrfqztcxtafub_1Zc5bUOfO9Y-o/exec">
 
 
 
@@ -315,7 +315,7 @@ Data: <span id="date">13 czerwca 2023 19:35:38</span>
 
 <div class="box-2">
   <div class="btn btn-two">
-    <span>HOVER ME</span>
+    <span id="submitButton"> HOVER ME</span>
   </div>
 </div>
 
@@ -406,7 +406,18 @@ if (!input3) {
 
 
   </script>
+
+
+
   </form>
 
+<script>
+  const submitButton = document.getElementById("submitButton");
+  const myForm = document.getElementById("myForm");
+
+  submitButton.addEventListener("click", function() {
+    myForm.submit();
+  });
+</script>
 
 </body></html>
