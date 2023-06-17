@@ -2,7 +2,7 @@
 <html><head>
 
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-93CF35NCTS"></script>
+<script async="" src="Samopis%20-%20Umowa%20Sprzeda%C5%BCy_pliki/js"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -31,7 +31,10 @@ body
       overflow: hidden;
       
 	background-position: center;
-	  
+
+
+
+
 
 flex-direction: column;
 flex-wrap: wrap;
@@ -51,7 +54,8 @@ font-family: 'Times New Roman', 'Open Sans Condensed', sans-serif;
     margin: 0;
     padding: 0;
   }
-    
+   
+
     .element {
 	margin-top: 25px;
       margin: 80;
@@ -59,74 +63,56 @@ text-align: center;
 
     }
     
-div[class*=box] {
-  height: 25.33%;
-  width: 100%; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.wrapper{
+ display: flex;
+      justify-content: center;
+      align-items: center;
+      
+
+
+ 
+margin-top: 40px;
 }
 
-.box-1 { background-color: #FF6766; }
-.box-2 { background-color: transparent; }
-.box-3 { background-color: #66A182; }
-
-.btn {
-  line-height: 40px;
-  height: 40px;
-  text-align: center;
-  width: 200px;
-  cursor: pointer;
-}
-
-
-.btn-two {
-  color: #000;
-
-  transition: all 0.5s;
-  position: relative; 
-}
-.btn-two span {
-  z-index: 2; 
+a{
   display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%; 
-}
-.btn-two::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  transition: all 0.5s;
-border: 1px solid rgba(0, 0, 0, 0.2);
-background-color: rgba(0, 0, 0, 0.1);
-}
-.btn-two::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  transition: all 0.5s;
-border: 1px solid rgba(0, 0, 0, 0.2);
-background-color: rgba(0, 0, 0, 0.1);;
-}
-.btn-two:hover::before {
-  transform: rotate(-45deg);
-  background-color: rgba(0, 0, 0, 0.1);;
-}
-.btn-two:hover::after {
-  transform: rotate(45deg);
-  background-color: rgba(0, 0, 0, 0.1);;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #333;
+  border: 2px solid #333;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all .35s;
 }
 
-    
+a span{
+  position: relative;
+  z-index: 2;
+}
+
+a:after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: grey;
+  transition: all .35s;
+}
+
+a:hover{
+  color: #fff;
+}
+
+a:hover:after{
+  width: 100%;
+}
 
     
     .element1,
@@ -261,7 +247,7 @@ h1 {
 <div class="element">
 	<div class="move-down">
   <p> 
-Data: <span id="date">13 czerwca 2023 19:35:38</span>
+Data: <span id="date">17 czerwca 2023 03:46:04</span>
  
  </p>
 </div>
@@ -278,7 +264,7 @@ Data: <span id="date">13 czerwca 2023 19:35:38</span>
 
 
 <div style="text-align: center;">
-<img src="logo.png" alt="Centered Image"><br>
+<img src="Samopis%20-%20Umowa%20Sprzeda%C5%BCy_pliki/logo.png" alt="Centered Image"><br>
 </div>
 
 <div class="element">
@@ -287,7 +273,7 @@ Data: <span id="date">13 czerwca 2023 19:35:38</span>
 <input type="text" placeholder="WA1W" id="input1" name="input1" style="width: 250px; height: 30px; font-size: 15px; text-align: center;" oninput="calculateKontrolna()"><br>
 </div>
 </div>
-</div>
+</form></div>
 
 
 <div style="text-align: center;">
@@ -297,7 +283,7 @@ Data: <span id="date">13 czerwca 2023 19:35:38</span>
     <input type="text" placeholder="11111111" id="input2" name="input2" style="width: 250px; height: 30px; font-size: 15px; text-align: center;" oninput="calculateKontrolna()"><br>
 </div>
 </div>
-</div>
+
 
 
 <div class="element">
@@ -330,17 +316,16 @@ Data: <span id="date">13 czerwca 2023 19:35:38</span>
 <input type="hidden" id="time" name="time" value="=now()">
 
 	
-<div style="margin-top: 65px;">
-<div class="element">
-<div class="box-2">
-  <div class="btn btn-two">
+
+
+<div class="wrapper">
+  
 	
-    <span id="submitButton">Rozpocznij</span>
+    <a href="#"><span id="submitButton">Rozpocznij</span></a>
   </div>
 </div>
-	</div>
-	</div>
 
+	
 
 
   <script>
@@ -436,7 +421,7 @@ if (!input2 || !/^\d{8}$/.test(input2)) {
 
 
 
-  </form>
+  
 
 <script>
   const submitButton = document.getElementById("submitButton");
@@ -453,6 +438,7 @@ if (!input2 || !/^\d{8}$/.test(input2)) {
     }
   });
 </script>
+
 
 
 </body></html>
