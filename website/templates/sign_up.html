@@ -1,0 +1,54 @@
+﻿{% extends "base.html" %} {% block title %}Zarejestruj się{% endblock %} {% block
+content %}
+
+<link rel="stylesheet" href="./static/style3.css">
+
+
+<form method="POST">
+    <div class="route" id="welcome"></div>
+    <div id="app">
+        <div class="app-view">
+            <header class="app-header">
+
+
+
+                <h1>Sign Up</h1>
+            </header>
+
+
+
+            <input type="email" class="form-control" id="email" name="email" required pattern=".*\.\w{2,}" placeholder="Adres e-mail" />
+
+
+
+
+            <input type="text"
+                   class="form-control"
+                   id="firstName"
+                   name="firstName"
+                   placeholder="Enter first name" />
+
+
+            <input type="password"
+                   class="form-control"
+                   id="password1"
+                   name="password1"
+                   placeholder="Enter password" />
+
+
+
+
+            <input type="password"
+                   class="form-control"
+                   id="password2"
+                   name="password2"
+                   placeholder="Confirm password" />
+
+
+        </div>
+    </div>
+    <a href="#welcome" class="btn app-button" onclick="document.querySelector('form').submit()">Zarejestuj</a>
+</form>
+
+
+{% endblock %}

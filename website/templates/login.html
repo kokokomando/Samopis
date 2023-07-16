@@ -1,0 +1,85 @@
+﻿{% extends "base.html" %} {% block title %}Samopis Rozpocznij{% endblock %} {% block content
+%}
+
+
+<form method="POST">
+    <div class="route" id="welcome"></div>
+    <div id="app">
+        <div class="app-view">
+            <header class="app-header">
+                <h1>Generuj umowę na podstawie księgi wieczystej</h1>
+
+                <span class="app-subheading">
+                    zaloguj się
+
+                    albo<br />
+                    rozpocznij bez logowania.
+                </span>
+            </header>
+
+
+
+
+            <input type="email" class="form-control" id="email" name="email" required pattern=".*\.\w{2,}" placeholder="Adres e-mail" />
+
+
+
+
+            <input type="password" required placeholder="Hasło" class="form-control" id="password" name="password" />
+
+
+            <a href="#welcome" class="btn app-button" onclick="document.querySelector('form').submit()">Zaloguj</a>
+
+
+
+</form>
+
+
+<div class="app-register">
+    Nie masz konta? <a>Zarejestruj się</a>
+</div>
+</div>
+
+
+    </div>
+
+<header class="app-header">
+    <div class="app-bar">
+        <div class="app-menu-icon"></div>
+
+    </div>
+
+
+
+
+
+    <div id="app-bar">
+
+        <!-- partial:index.partial.html -->
+        <a href="/nologin" class="link">
+
+            <svg viewBox='0 0 200 200' width='300' height='1500' xmlns='http://www.w3.org/2000/svg' class="link__svg" aria-labelledby="link1-title link1-desc">
+                <title id="link1-title"> </title>
+                <desc id="link1-desc">A rotating link with text placed around a circle with an arrow inside</desc>
+
+                <path id="link-circle" class="link__path" d="M 20, 100 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0" stroke="none" fill="none" />
+
+                <path class="link__arrow" d="M 75 100 L 125 100 L 110 85 M 125 100 L 110 115" fill="none" />
+
+                <text class="link__text">
+                    <textPath href="#link-circle" stroke="none">
+                        START BEZ LOGOWANIA
+                    </textPath>
+                </text>
+            </svg>
+        </a>
+
+
+        <!-- partial -->
+    </div>
+
+
+
+
+
+    {% endblock %}
